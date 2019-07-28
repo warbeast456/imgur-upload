@@ -11,22 +11,35 @@ import Photos
 
 private let reuseIdentifier = "Cell"
 
-class GalleryCollectionViewController: UICollectionViewController {
+class GalleryCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var imageArray = [UIImage]()
-
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        collectionView.backgroundColor = .green
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         getPhotos()
-        self.collectionView!.reloadData()
+//        self.collectionView!.reloadData()
         
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let viewwidth = view.frame.width
+        let cellsPerLine = (UIDevice.current.orientation == UIDeviceOrientation.portrait) ? 3 : 5
+        let cellsPerLineFloat = CGFloat(cellsPerLine)
+        let spacing = (cellsPerLineFloat - 1)
+        
+        let cellWidth = (viewwidth - spacing) / cellsPerLineFloat
+        
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -43,7 +56,8 @@ class GalleryCollectionViewController: UICollectionViewController {
         return 1
     }
 
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
@@ -82,6 +96,10 @@ class GalleryCollectionViewController: UICollectionViewController {
         }
         
     }
+    
+    // MARK: UICollectionViewFlowLayout
+    
+
 
     // MARK: UICollectionViewDelegate
 
