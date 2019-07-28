@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-private let reuseIdentifier = "Cell"
+private let reuseImgCellIdentifier = "GalleryImgCellIdentifier"
 
 class GalleryCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -18,7 +18,8 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseImgCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         getPhotos()
@@ -63,12 +64,9 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        let imageView = UIImageView(image: imageArray[indexPath.row])
-        cell.contentView.addSubview(imageView)
-        imageView.anchorTo(top: cell.topAnchor, left: cell.leftAnchor, bottom: cell.bottomAnchor, right: cell.rightAnchor)
-        
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseImgCellIdentifier, for: indexPath) as! GalleryCollectionViewCell
+        cell.ImageView.image = imageArray[indexPath.row]
+
         return cell
     }
     
@@ -97,9 +95,11 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
         
     }
     
-    // MARK: UICollectionViewFlowLayout
-    
-
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
+        print("selected \(indexPath)")
+        selectedCell.startProgressAnimation()
+    }
 
     // MARK: UICollectionViewDelegate
 

@@ -40,14 +40,13 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="Ljs-GW-dvB">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="GalleryImgCellIdentifier" id="Ljs-GW-dvB">
                                 <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
