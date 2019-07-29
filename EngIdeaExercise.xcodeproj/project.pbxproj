@@ -14,6 +14,8 @@
 		0723B70822E9ABA800C7A4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0723B70622E9ABA800C7A4F1 /* LaunchScreen.storyboard */; };
 		0723B71122E9AEB500C7A4F1 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B71022E9AEB500C7A4F1 /* GalleryCollectionViewController.swift */; };
 		0723B71822E9C87000C7A4F1 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B71722E9C87000C7A4F1 /* Anchors.swift */; };
+		0749317522EF4B8400DA1A99 /* URLListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749317422EF4B8400DA1A99 /* URLListTableViewController.swift */; };
+		0749317822EF564B00DA1A99 /* UserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749317722EF564B00DA1A99 /* UserCache.swift */; };
 		07EAAD1122EDB2AC007499FB /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */; };
 		44178B6C5E89C03B36BF0F30 /* Pods_EngIdeaExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		0723B70922E9ABA800C7A4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0723B71022E9AEB500C7A4F1 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
 		0723B71722E9C87000C7A4F1 /* Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
+		0749317422EF4B8400DA1A99 /* URLListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLListTableViewController.swift; sourceTree = "<group>"; };
+		0749317722EF564B00DA1A99 /* UserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCache.swift; sourceTree = "<group>"; };
 		07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		14EC558F193E2D2D133C3374 /* Pods-EngIdeaExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngIdeaExercise.release.xcconfig"; path = "Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise.release.xcconfig"; sourceTree = "<group>"; };
 		5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngIdeaExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,7 @@
 			children = (
 				0723B71422E9C84E00C7A4F1 /* Extensions */,
 				0723B70F22E9AE3900C7A4F1 /* ViewControllers */,
+				0749317622EF562C00DA1A99 /* Model */,
 				0723B71222E9AEEA00C7A4F1 /* Views */,
 				0723B6FA22E9ABA600C7A4F1 /* AppDelegate.swift */,
 				0723B6FE22E9ABA600C7A4F1 /* Main.storyboard */,
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0723B71022E9AEB500C7A4F1 /* GalleryCollectionViewController.swift */,
+				0749317422EF4B8400DA1A99 /* URLListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +108,14 @@
 				0723B71722E9C87000C7A4F1 /* Anchors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0749317622EF562C00DA1A99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0749317722EF564B00DA1A99 /* UserCache.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7ADC984FFEA78AE99778FA49 /* Frameworks */ = {
@@ -240,9 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0723B70322E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld in Sources */,
+				0749317822EF564B00DA1A99 /* UserCache.swift in Sources */,
 				07EAAD1122EDB2AC007499FB /* GalleryCollectionViewCell.swift in Sources */,
 				0723B71122E9AEB500C7A4F1 /* GalleryCollectionViewController.swift in Sources */,
 				0723B71822E9C87000C7A4F1 /* Anchors.swift in Sources */,
+				0749317522EF4B8400DA1A99 /* URLListTableViewController.swift in Sources */,
 				0723B6FB22E9ABA600C7A4F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

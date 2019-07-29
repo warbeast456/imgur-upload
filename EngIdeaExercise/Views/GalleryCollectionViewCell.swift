@@ -51,9 +51,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     ///Starts progress animation
     public func startProgressAnimation() {
-        if !ProgressView.isAnimating {
         ProgressView.startAnimating()
-        } else {stopProgressAnimation()}
     }
     
     /// Displays sucsessfull upload, stops progress animation
