@@ -12,6 +12,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     var ImageView: UIImageView {didSet {setNeedsDisplay()}}
     var ProgressView: UIActivityIndicatorView
     var downloadedStatusImage: UIImageView
+
     
     override init(frame: CGRect) {
         self.ImageView = UIImageView()
@@ -24,8 +25,6 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         setupDowloadedStatusImage()
         setupProgressView()
     }
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -50,12 +49,14 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         ProgressView.anchorTo(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
     }
     
+    ///Starts progress animation
     public func startProgressAnimation() {
         if !ProgressView.isAnimating {
         ProgressView.startAnimating()
         } else {stopProgressAnimation()}
     }
     
+    /// Displays sucsessfull upload, stops progress animation
     public func stopProgressAnimation() {
         ProgressView.stopAnimating()
         UIView.animate(withDuration: 1,

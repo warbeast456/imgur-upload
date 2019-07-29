@@ -8,11 +8,13 @@
 
 import UIKit
 import Photos
+import ImgurAnonymousAPI
 
 private let reuseImgCellIdentifier = "GalleryImgCellIdentifier"
 
 class GalleryCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    private let imgur = ImgurUploader(clientID: "2d9997b6ad1dbe4")
     var imageArray = [UIImage]()
     
     override func viewDidLoad() {
@@ -99,6 +101,7 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
         let selectedCell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
         print("selected \(indexPath)")
         selectedCell.startProgressAnimation()
+        upload(image: selectedCell.ImageView.image!)
     }
 
     // MARK: UICollectionViewDelegate
@@ -131,5 +134,17 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     
     }
     */
-
+    func upload(image: UIImage) {
+        var imgUrl: URL? = nil
+        imgur.upload(image, completion: { result in
+            switch result {
+            case .success(let response):
+                imgUrl = response.link
+                print(imgUrl)
+            case .failure(let error):
+                print("Upload failed: \(error)")
+            }
+        })
+        
+    }
 }
