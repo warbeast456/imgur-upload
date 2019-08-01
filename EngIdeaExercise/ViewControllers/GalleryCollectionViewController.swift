@@ -15,7 +15,6 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     
     let images = UserImageManager.shared
     let uploader = ImgurManager.shared
-    var URLs = URLManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +65,7 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
                         print("failed to get URL")
                         return
                 }
-                self.URLs.saved.append(url)
+                URLManager.save(url.absoluteString)
                 selectedCell.stopProgressAnimation()
                 selectedCell.upload = .finished
             })

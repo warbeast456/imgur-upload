@@ -13,7 +13,7 @@ private let reusableLinkLabelCellIdentifier = "ReusableLinkCellIdentifier"
 
 class URLListTableViewController: UITableViewController {
     
-    let URLList = URLManager.shared.saved
+    let URLList = URLManager.get()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class URLListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reusableLinkLabelCellIdentifier, for: indexPath)
-        let urlString = URLList[indexPath.section].absoluteString
+        let urlString = URLList[indexPath.section]
         cell.textLabel?.text = urlString
         return cell
     }
@@ -41,7 +41,7 @@ class URLListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard URLList.count > indexPath.row
             else { return }
-        let url = URLList[indexPath.row]
+        let url = URL(string: URLList[indexPath.row])!
         UIApplication.shared.canOpenURL(url)
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }

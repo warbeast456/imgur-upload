@@ -11,10 +11,7 @@ import Foundation
 ///Simple bridge to UserDefaults
 class URLManager {
     static let key = "URLList"
-    static let shared = URLManager()
     private init() {}
-    
-    var saved = [URL]()
     
     static func save(_ value: String) {
         var cache = get()
