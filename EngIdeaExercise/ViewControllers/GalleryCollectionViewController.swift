@@ -54,15 +54,20 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
+        guard selectedCell.didUploaded == false else {
+            selectedCell.stopProgressAnimation()
+            return
+        }
         selectedCell.startProgressAnimation()
         uploader.upload(image: selectedCell.ImageView.image!, completion: { result in
             guard let url = result
-            else {
-                print("failed to get URL")
-                return
+                else {
+                    print("failed to get URL")
+                    return
             }
             self.URLs.saved.append(url)
             selectedCell.stopProgressAnimation()
+            selectedCell.didUploaded = true
         })
         
     }

@@ -12,7 +12,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     var ImageView: UIImageView {didSet {setNeedsDisplay()}}
     var ProgressView: UIActivityIndicatorView
     var downloadedStatusImage: UIImageView
-
+    var didUploaded = false
     
     override init(frame: CGRect) {
         self.ImageView = UIImageView()

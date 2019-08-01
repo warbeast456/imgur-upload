@@ -18,7 +18,6 @@ class URLListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reusableLinkLabelCellIdentifier)
-        print(URLList)
     }
 
     // MARK: - Table view data source
