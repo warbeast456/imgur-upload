@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		0723B6FB22E9ABA600C7A4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B6FA22E9ABA600C7A4F1 /* AppDelegate.swift */; };
 		0723B70022E9ABA600C7A4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0723B6FE22E9ABA600C7A4F1 /* Main.storyboard */; };
-		0723B70322E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0723B70122E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld */; };
 		0723B70522E9ABA800C7A4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0723B70422E9ABA800C7A4F1 /* Assets.xcassets */; };
 		0723B70822E9ABA800C7A4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0723B70622E9ABA800C7A4F1 /* LaunchScreen.storyboard */; };
 		0723B71122E9AEB500C7A4F1 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B71022E9AEB500C7A4F1 /* GalleryCollectionViewController.swift */; };
 		0723B71822E9C87000C7A4F1 /* Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723B71722E9C87000C7A4F1 /* Anchors.swift */; };
 		0749317522EF4B8400DA1A99 /* URLListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749317422EF4B8400DA1A99 /* URLListTableViewController.swift */; };
-		0749317822EF564B00DA1A99 /* UserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749317722EF564B00DA1A99 /* UserCache.swift */; };
+		0749317822EF564B00DA1A99 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749317722EF564B00DA1A99 /* URLManager.swift */; };
+		075F920C22F2C7B10079BD05 /* ImgurManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F920B22F2C7B10079BD05 /* ImgurManager.swift */; };
+		075F920E22F2CCE60079BD05 /* UserImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F920D22F2CCE60079BD05 /* UserImageManager.swift */; };
 		07EAAD1122EDB2AC007499FB /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */; };
 		44178B6C5E89C03B36BF0F30 /* Pods_EngIdeaExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -24,14 +25,15 @@
 		0723B6F722E9ABA600C7A4F1 /* EngIdeaExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngIdeaExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0723B6FA22E9ABA600C7A4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0723B6FF22E9ABA600C7A4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0723B70222E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngIdeaExercise.xcdatamodel; sourceTree = "<group>"; };
 		0723B70422E9ABA800C7A4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0723B70722E9ABA800C7A4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0723B70922E9ABA800C7A4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0723B71022E9AEB500C7A4F1 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
 		0723B71722E9C87000C7A4F1 /* Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors.swift; sourceTree = "<group>"; };
 		0749317422EF4B8400DA1A99 /* URLListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLListTableViewController.swift; sourceTree = "<group>"; };
-		0749317722EF564B00DA1A99 /* UserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCache.swift; sourceTree = "<group>"; };
+		0749317722EF564B00DA1A99 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		075F920B22F2C7B10079BD05 /* ImgurManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurManager.swift; sourceTree = "<group>"; };
+		075F920D22F2CCE60079BD05 /* UserImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageManager.swift; sourceTree = "<group>"; };
 		07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		14EC558F193E2D2D133C3374 /* Pods-EngIdeaExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngIdeaExercise.release.xcconfig"; path = "Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise.release.xcconfig"; sourceTree = "<group>"; };
 		5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngIdeaExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +82,6 @@
 				0723B70422E9ABA800C7A4F1 /* Assets.xcassets */,
 				0723B70622E9ABA800C7A4F1 /* LaunchScreen.storyboard */,
 				0723B70922E9ABA800C7A4F1 /* Info.plist */,
-				0723B70122E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld */,
 			);
 			path = EngIdeaExercise;
 			sourceTree = "<group>";
@@ -113,7 +114,9 @@
 		0749317622EF562C00DA1A99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0749317722EF564B00DA1A99 /* UserCache.swift */,
+				0749317722EF564B00DA1A99 /* URLManager.swift */,
+				075F920B22F2C7B10079BD05 /* ImgurManager.swift */,
+				075F920D22F2CCE60079BD05 /* UserImageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,12 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0723B70322E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld in Sources */,
-				0749317822EF564B00DA1A99 /* UserCache.swift in Sources */,
+				0749317822EF564B00DA1A99 /* URLManager.swift in Sources */,
 				07EAAD1122EDB2AC007499FB /* GalleryCollectionViewCell.swift in Sources */,
 				0723B71122E9AEB500C7A4F1 /* GalleryCollectionViewController.swift in Sources */,
 				0723B71822E9C87000C7A4F1 /* Anchors.swift in Sources */,
 				0749317522EF4B8400DA1A99 /* URLListTableViewController.swift in Sources */,
+				075F920C22F2C7B10079BD05 /* ImgurManager.swift in Sources */,
+				075F920E22F2CCE60079BD05 /* UserImageManager.swift in Sources */,
 				0723B6FB22E9ABA600C7A4F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,19 +467,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0723B70122E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0723B70222E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodel */,
-			);
-			currentVersion = 0723B70222E9ABA600C7A4F1 /* EngIdeaExercise.xcdatamodel */;
-			path = EngIdeaExercise.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0723B6EF22E9ABA600C7A4F1 /* Project object */;
 }

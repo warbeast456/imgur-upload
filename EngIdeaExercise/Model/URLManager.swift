@@ -1,5 +1,5 @@
 //
-//  UserCache.swift
+//  URLManager.swift
 //  EngIdeaExercise
 //
 //  Created by MSQUARDIAN on 7/29/19.
@@ -9,8 +9,12 @@
 import Foundation
 
 ///Simple bridge to UserDefaults
-struct UserURLCache {
+class URLManager {
     static let key = "URLList"
+    static let shared = URLManager()
+    private init() {}
+    
+    var saved = [URL]()
     
     static func save(_ value: String) {
         var cache = get()
