@@ -12,7 +12,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     var ImageView: UIImageView {didSet {setNeedsDisplay()}}
     var ProgressView: UIActivityIndicatorView
     var downloadedStatusImage: UIImageView
-    var didUploaded = false
+    var upload = uploadStatus.none
+    
+
     
     override init(frame: CGRect) {
         self.ImageView = UIImageView()
@@ -77,4 +79,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         })
     }
     
+}
+
+/// Finished, inProgress, none
+enum uploadStatus {
+    case finished, inProgress, none
 }

@@ -18,7 +18,7 @@
 		075F920C22F2C7B10079BD05 /* ImgurManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F920B22F2C7B10079BD05 /* ImgurManager.swift */; };
 		075F920E22F2CCE60079BD05 /* UserImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F920D22F2CCE60079BD05 /* UserImageManager.swift */; };
 		07EAAD1122EDB2AC007499FB /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */; };
-		44178B6C5E89C03B36BF0F30 /* Pods_EngIdeaExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		71CE6DDD387B9FC1366FBEC8 /* libPods-EngIdeaExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D546DBDD6E6E72374033C23 /* libPods-EngIdeaExercise.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		075F920D22F2CCE60079BD05 /* UserImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageManager.swift; sourceTree = "<group>"; };
 		07EAAD0F22EDB2AC007499FB /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		14EC558F193E2D2D133C3374 /* Pods-EngIdeaExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngIdeaExercise.release.xcconfig"; path = "Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise.release.xcconfig"; sourceTree = "<group>"; };
-		5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngIdeaExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D546DBDD6E6E72374033C23 /* libPods-EngIdeaExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EngIdeaExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7027A768A37372D8F56908FF /* Pods-EngIdeaExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngIdeaExercise.debug.xcconfig"; path = "Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44178B6C5E89C03B36BF0F30 /* Pods_EngIdeaExercise.framework in Frameworks */,
+				71CE6DDD387B9FC1366FBEC8 /* libPods-EngIdeaExercise.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		7ADC984FFEA78AE99778FA49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5276683F378E5627C1BD25AC /* Pods_EngIdeaExercise.framework */,
+				1D546DBDD6E6E72374033C23 /* libPods-EngIdeaExercise.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,7 +149,6 @@
 				0723B6F322E9ABA600C7A4F1 /* Sources */,
 				0723B6F422E9ABA600C7A4F1 /* Frameworks */,
 				0723B6F522E9ABA600C7A4F1 /* Resources */,
-				4044A721AD1CB8C4AE4FE8A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,23 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4044A721AD1CB8C4AE4FE8A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EngIdeaExercise/Pods-EngIdeaExercise-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -49,26 +49,31 @@ class GalleryCollectionViewController: UICollectionViewController, UICollectionV
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableImgCellIdentifier, for: indexPath) as! GalleryCollectionViewCell
         cell.ImageView.image = images.images[indexPath.row]
+        if cell.upload == .inProgress {
+            cell.startProgressAnimation()
+        }
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
-        guard selectedCell.didUploaded == false else {
-            selectedCell.stopProgressAnimation()
+        switch selectedCell.upload {
+        case .none:
+            selectedCell.startProgressAnimation()
+            uploader.upload(image: selectedCell.ImageView.image!, completion: { result in
+                guard let url = result
+                    else {
+                        print("failed to get URL")
+                        return
+                }
+                self.URLs.saved.append(url)
+                selectedCell.stopProgressAnimation()
+                selectedCell.upload = .finished
+            })
+        case .inProgress:
             return
-        }
-        selectedCell.startProgressAnimation()
-        uploader.upload(image: selectedCell.ImageView.image!, completion: { result in
-            guard let url = result
-                else {
-                    print("failed to get URL")
-                    return
-            }
-            self.URLs.saved.append(url)
+        case .finished:
             selectedCell.stopProgressAnimation()
-            selectedCell.didUploaded = true
-        })
-        
+        }
     }
 }
