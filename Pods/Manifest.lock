@@ -1,0 +1,16 @@
+PODS:
+  - ImgurAnonymousAPI (0.9)
+
+DEPENDENCIES:
+  - ImgurAnonymousAPI (~> 0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImgurAnonymousAPI
+
+SPEC CHECKSUMS:
+  ImgurAnonymousAPI: ebf15883d021832c80e4b1cc1fc0cee445fea7e7
+
+PODFILE CHECKSUM: d8b39b1fc92536c2dac5461ef09ab41e036e5101
+
+COCOAPODS: 1.7.2
